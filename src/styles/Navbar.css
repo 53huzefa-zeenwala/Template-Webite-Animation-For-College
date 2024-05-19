@@ -1,0 +1,24 @@
+
+nav {
+    @apply w-full px-[5%] py-8
+}
+
+ul {
+    @apply flex md:justify-between items-center px-6 justify-center
+}
+ul > li {
+    @apply uppercase cursor-pointer text-opacity-80 md:block hidden hover:text-yellow-400
+}
+ul > li {
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo {
+    @apply md:w-[40%] flex justify-center flex-col items-center 
+}
+.logo > div{
+    @apply text-xl font-medium
+}
+.logo > span {
+    @apply text-sm
+}

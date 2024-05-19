@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Inter', sans-serif;
+  color: rgb(46, 0, 46);
+}
+
+body {
+  @apply bg-pink-50 text-[#1f1f1f]
+}
+
+.imageDiv {
+  @apply bg-gray-200 flex justify-center items-center h-[22rem] w-[70%] mx-auto
+}
+.imageDiv {
+  transition: all 1s ease;
+}
+.imageDiv[data-isextend="true"] {
+  height: 26rem;
+  width: 90%;
+}
+
+.tag2,
+.tag2>span {
+  font-family: 'Oswald', sans-serif;
+}
+
+.videoDiv {
+  transition: all 1.5s ease;
+  transform-origin: center;
+}
+
+.section-one[data-isvisible="false"]>.videoDiv {
+  height: 0;
+  visibility: hidden;
+}
+
+.section-one[data-isvisible="true"]>.videoDiv {
+  height: 100%;
+  visibility: visible;
+}
+
+.content {
+  @apply px-[7%] flex flex-col gap-6
+}
+
+.content>h2 {
+  @apply text-5xl font-bold
+}
+
+.content>h2,
+.content>h4 {
+  font-family: 'Cutive Mono', sans-serif;
+}
+
+.content>p {
+  @apply text-lg font-thin tracking-wider
+}
+
+.content>p {
+  font-family: 'Oswald', sans-serif;
+}
+
+.content>button {
+  @apply border-2 border-r-0 px-4 py-2 text-lg w-1/2 text-gray-600 border-gray-500 ml-[40%]
+}
+
+.content>button {
+  transition: all 0.5s ease;
+}
+
+.content>button:hover {
+  @apply border-yellow-400 text-yellow-400 border-r-0
+}
+
+.section-one>.content {
+  transition: all 1.5s ease;
+}
+
+.section-one[data-isvisible="false"]>.content {
+  padding-top: 25%;
+}
+
+.section-two {
+  transition: all 1s ease;
+  transform-origin: center;
+}
+
+.section-two[data-isvisible="false"] {
+  margin-top: 20vh;
+  height: 70vh;
+  visibility: hidden;
+}
+
+.section-two[data-isvisible="true"] {
+  margin-top: 0;
+  height: 100vh;
+  visibility: visible;
+}
+
+.section-two[data-isvisible="false"]>.content>.image {
+  height: 0;
+}
+
+.section-three>.content {
+  transition: opacity 2.5s ease;
+  transform-origin: left;
+}
+
+.section-three[data-isvisible="false"]>.content {
+  opacity: 0;
+}
+
+.section-three[data-isvisible="three"]>.content {
+  opacity: 1;
+}
+
+.section-three>.image {
+  transition: padding-top 1.5s ease;
+}
+
+.section-three[data-isvisible="false"]>.image {
+  padding-top: 10rem;
+}
+
+.section-three[data-isvisible="three"]>.image {
+  padding-top: 0;
+}
+
+.section-five {
+  background: hsla(283, 83%, 86%, 1);
+  background: linear-gradient(90deg, hsla(283, 83%, 86%, 1) 0%, hsl(327deg 73% 97%) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(283, 83%, 86%, 1) 0% ,hsl(327deg 73% 97%) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#E8BDF9", endColorstr="#D8DED6", GradientType=1);
+  /* filter: blur(10px); */
+  position: absolute;
+  width: 100%;
+}
